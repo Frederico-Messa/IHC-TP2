@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/augend_input_text_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Enter the augend"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addend_input_text_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter the addend"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/augend_input_text_box"
+        app:layout_constraintTop_toBottomOf="@+id/augend_input_text_box" />
+
+    <Button
+        android:id="@+id/compute_addition_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="compute_addition"
+        android:text="Compute the addition"
+        app:layout_constraintStart_toStartOf="@+id/addend_input_text_box"
+        app:layout_constraintTop_toBottomOf="@+id/addend_input_text_box" />
+
+    <TextView
+        android:id="@+id/sum_output_text_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:text="Sum: "
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/addend_input_text_box"
+        app:layout_constraintTop_toBottomOf="@+id/compute_addition_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
